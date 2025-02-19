@@ -31,7 +31,7 @@ $ git log --oneline //сокращенный log
 graph LR;
   untracked -- "git add" --> staged_tracked;
   staged_tracked -- "git commit" --> tracked;
-  tracked -- "изменения" --> modified_tracked;
+  tracked -- "изменения" --> modified;
   modified -- "git add" --> staged_tracked;
 
 ```  
