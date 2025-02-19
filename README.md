@@ -19,3 +19,6 @@ $ git commit -m 'Мой первый коммит!'
 ```
 $ git log
 ```
+```
+$ git log --onelane //сокращенный log
+```
