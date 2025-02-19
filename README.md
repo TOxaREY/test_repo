@@ -20,7 +20,7 @@ $ git commit -m 'Мой первый коммит!'
 $ git log
 ```
 ```
-$ git log --onelane //сокращенный log
+$ git log --oneline //сокращенный log
 ```
 ### Файл HEAD:
 Внутри HEAD — ссылка на служебный файл: refs/heads/master (или refs/heads/main в зависимости от названия ветки). Если заглянуть в этот файл, можно увидеть хеш последнего коммита.
@@ -29,9 +29,9 @@ $ git log --onelane //сокращенный log
 
 ```mermaid
 graph LR;
-  untracked -- "git add" --> staged(+ tracked);
-  staged(+ tracked) -- "git commit" --> tracked;
-  tracked -- "изменения" --> modified (+ tracked);
-  modified -- "git add" --> staged(+ tracked);
+  untracked -- "git add" --> staged_tracked;
+  staged_tracked -- "git commit" --> tracked;
+  tracked -- "изменения" --> modified_tracked;
+  modified -- "git add" --> staged_tracked;
 
 ```  
