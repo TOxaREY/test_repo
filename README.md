@@ -22,5 +22,16 @@ $ git log
 ```
 $ git log --onelane //сокращенный log
 ```
-### Файл HEAD
+### Файл HEAD:
 Внутри HEAD — ссылка на служебный файл: refs/heads/master (или refs/heads/main в зависимости от названия ветки). Если заглянуть в этот файл, можно увидеть хеш последнего коммита.
+### Статусы untracked/tracked, staged и modified:
+
+
+```mermaid
+graph LR;
+  untracked -- "git add" --> staged(+ tracked);
+  staged(+ tracked) -- "git commit" --> tracked;
+  tracked -- "изменения" --> modified (+ tracked);
+  modified -- "git add" --> staged(+ tracked);
+
+```  
